@@ -69,7 +69,7 @@ const transformData = (data: any) => {
 };
 
 
-export default function Editor({ valueToShow }) {
+export default function Editor({ valueToShow: valueToShow }: any) {
   const [isMounted, setIsMounted] = useState(false)
   const ref = useRef<EditorJS>();
   const [finalResult, setFinalResult] = useState([])
