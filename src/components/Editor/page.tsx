@@ -12,7 +12,7 @@ const extractListItems = (html: any) => {
   const listType = html.includes('<ol>') ? 'ordered' : 'unordered';
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
-  const items = Array.from(doc.querySelectorAll('li')).map(item => item.textContent.trim());
+  const items = Array.from(doc.querySelectorAll('li')).map(item => item?.textContent?.trim());
   return { listType, items };
 };
 
